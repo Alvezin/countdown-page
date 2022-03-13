@@ -36,7 +36,7 @@ main .text .cadastro {
   font-family: "Poppins", sans-serif;
   font-size: small;
 }
-main .text .cadastro #signup {
+main .text .cadastro .btn {
   width: 130px;
   height: 40px;
   font-family: "Poppins", sans-serif;
@@ -47,7 +47,7 @@ main .text .cadastro #signup {
   color: white;
   cursor: pointer;
 }
-main .text .cadastro #signup:hover {
+main .text .cadastro .btn:hover {
   background-color: #554cfd;
   transition: 0.3s ease-in;
 }
@@ -65,6 +65,81 @@ main .text .timer div span {
 }
 main .text .timer div p {
   text-align: center;
+}
+main #modal {
+  z-index: 10;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.576);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+main #modal #box {
+  width: 50%;
+  height: 50%;
+  background-color: #9292e1;
+  border-radius: 10px;
+  padding: 10px;
+  border: 3px solid #5952e4;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main #modal #box .top-box {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+main #modal #box .top-box input {
+  width: 60px;
+  background-color: #6C63FF;
+  border: 2px solid #5454e6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+main #modal #box .top-box input:hover {
+  background-color: #5454e6;
+}
+main #modal #box div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+main #modal #box div input {
+  width: 60%;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid #a09b9b;
+  padding: 3px;
+  outline: 1px solid #706f6f;
+}
+main #modal #box div input:hover {
+  background-color: #cfcccc;
+  transition: 0.5s;
+}
+main #modal #box #submit {
+  width: 130px;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  background-color: #6C63FF;
+  border-radius: 8px;
+  border: 2px solid #554cfd;
+  color: white;
+  cursor: pointer;
+}
+main #modal #box #submit:hover {
+  background-color: #554cfd;
+  transition: 0.3s ease-in;
+}
+main #modal.active {
+  display: flex;
 }
 main .img-rocket {
   grid-area: rocket;

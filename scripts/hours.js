@@ -10,7 +10,7 @@ function atualizar(){
     const hours = Math.floor((mili/3600000)%24);
     const days = Math.floor((mili/86400000));
     
-    let segundo = document.getElementById('sec');
+    const segundo = document.getElementById('sec');
     const minuto = document.getElementById('min');
     const hora = document.getElementById('hora');
     const dia = document.getElementById('dia');

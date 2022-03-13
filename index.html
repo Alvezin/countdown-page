@@ -37,15 +37,38 @@
                 <h3>
                     Inscreva-se para saber mais sobre o lançamento
                 </h3>
-                <input type="button" id="signup" value="Inscreva-se">
+                <input type="button" id="signup" class="btn" value="Inscreva-se" onclick="modalToggle('modal')">
             </div>
         </section>
         <section class="img-rocket">
             <img src="img/rocket.svg" alt="">
         </section>
         <img class="img-bottom" src="img/bottom-image.svg" alt="">
+
+        <section id="modal">
+            <div id="box">
+                <div class="top-box">
+                    <h2>Cadastre-se</h2>
+                    <input type="button" value="X" onclick="modalToggle('modal')">
+                </div>
+
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="email" placeholder="Insira seu nome: ">
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Insira seu e-mail:">
+                </div>
+                <div class="submit-box">
+                    <button class="btn" id="submit">Receber</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <script src="scripts/modalToggle.js"></script>
     <script src="scripts/hours.js"></script>
 </body>
 </html>
