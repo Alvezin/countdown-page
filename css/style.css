@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "top top" "text rocket" "text rocket" "bottom bottom";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+main .img-top {
+  grid-area: top;
+}
+main .text {
+  grid-area: text;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+main .text h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: xx-large;
+  color: #9C9AB6;
+  text-transform: uppercase;
+}
+main .text .cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+}
+main .text .cadastro #signup {
+  width: 130px;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  background-color: #6C63FF;
+  border-radius: 8px;
+  border: 2px solid #554cfd;
+  color: white;
+  cursor: pointer;
+}
+main .text .cadastro #signup:hover {
+  background-color: #554cfd;
+  transition: 0.3s ease-in;
+}
+main .text .timer {
+  display: flex;
+  gap: 30px;
+}
+main .text .timer div {
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+main .text .timer div span {
+  font-size: 5rem;
+  color: #6C63FF;
+}
+main .text .timer div p {
+  text-align: center;
+}
+main .img-rocket {
+  grid-area: rocket;
+  z-index: 1;
+}
+main .img-bottom {
+  grid-area: bottom;
+}
+
+/*# sourceMappingURL=style.css.map */
