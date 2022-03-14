@@ -27,7 +27,7 @@ main{
     "text rocket"
     "bottom bottom";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     & .img-top{
         grid-area: top;
         width: 100vw;
@@ -224,6 +224,11 @@ main{
                 & h3{
                     font-size: .8rem;
                 }
+            }
+        }
+        & #modal{
+            & #box{
+                width:80%;
             }
         }
     }

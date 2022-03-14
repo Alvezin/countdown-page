@@ -9,7 +9,7 @@ main {
   display: grid;
   grid-template-areas: "top top" "text rocket" "text rocket" "bottom bottom";
   grid-template-columns: 50% 50%;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 main .img-top {
   grid-area: top;
@@ -210,6 +210,9 @@ main .img-bottom {
   }
   main .text .cadastro h3 {
     font-size: 0.8rem;
+  }
+  main #modal #box {
+    width: 80%;
   }
 }
 @media screen and (max-width: 351px) {
