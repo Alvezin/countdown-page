@@ -30,8 +30,10 @@ main{
     grid-template-rows: 1fr 1fr 1fr 1fr;
     & .img-top{
         grid-area: top;
+        width: 100vw;
     }
     & .text{
+        width: 100%;
         grid-area: text;
         z-index: 10;
         display: flex;
@@ -82,6 +84,11 @@ main{
         display: none;
         justify-content: center;
         align-items: center;
+        & form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
         & #box{
             width: 50%;
             height: 50%;
@@ -139,9 +146,112 @@ main{
     }
     & .img-rocket{
         grid-area: rocket;
+        width: fit-content;
+        height: fit-content;
         z-index: 1;
+        & img{
+            width: 100%;
+        }
     }
     & .img-bottom{
         grid-area: bottom;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 1051px) {
+    main{
+        grid-template-areas: 
+        "top top"
+        "text text"
+        "rocket rocket"
+        "bottom bottom";
+        grid-template-columns: 100%;
+        & .text{
+            width: 100vw;
+            padding: 0;
+        }
+        & .img-rocket{
+            width: 30%;
+            width: 100%;
+            & img{
+                width: 40%;
+                float: right;
+                margin-right: 40px;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 612px) {
+    main{
+        & #timer{
+            & div{
+                & span{
+                    font-size: 3.3rem;
+                }
+            }
+        }
+        & .img-rocket{
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            & img{
+                margin: auto;
+                float: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 461px){
+    main{
+        & .text{
+            & h1{
+                font-size: 1.5rem;
+            }
+            & #timer{
+                gap: 22px;
+                & div{
+                    padding: 0;
+                    & span{
+                        font-size: 3rem;
+                    }
+                }
+            }
+            & .cadastro{
+                & h3{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 351px) {
+    main{
+        & .text{
+            & h1{
+                font-size: 1.5rem;
+            }
+            & #timer{
+                gap: 15px;
+                & div{
+                    padding: 0;
+                    & p{
+                        font-size: .7rem;
+                    }
+                    & span{
+                        font-size: 3rem;
+                    }
+                }
+            }
+            & .cadastro{
+                & h3{
+                    font-size: .7rem;
+                }
+            }
+        }
     }
 }

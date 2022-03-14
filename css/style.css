@@ -13,8 +13,10 @@ main {
 }
 main .img-top {
   grid-area: top;
+  width: 100vw;
 }
 main .text {
+  width: 100%;
   grid-area: text;
   z-index: 10;
   display: flex;
@@ -75,6 +77,11 @@ main #modal {
   display: none;
   justify-content: center;
   align-items: center;
+}
+main #modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 main #modal #box {
   width: 50%;
@@ -143,10 +150,87 @@ main #modal.active {
 }
 main .img-rocket {
   grid-area: rocket;
+  width: fit-content;
+  height: fit-content;
   z-index: 1;
+}
+main .img-rocket img {
+  width: 100%;
 }
 main .img-bottom {
   grid-area: bottom;
+  width: 100vw;
+}
+
+@media screen and (max-width: 1051px) {
+  main {
+    grid-template-areas: "top top" "text text" "rocket rocket" "bottom bottom";
+    grid-template-columns: 100%;
+  }
+  main .text {
+    width: 100vw;
+    padding: 0;
+  }
+  main .img-rocket {
+    width: 30%;
+    width: 100%;
+  }
+  main .img-rocket img {
+    width: 40%;
+    float: right;
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 612px) {
+  main #timer div span {
+    font-size: 3.3rem;
+  }
+  main .img-rocket {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  main .img-rocket img {
+    margin: auto;
+    float: none;
+  }
+}
+@media screen and (max-width: 461px) {
+  main .text h1 {
+    font-size: 1.5rem;
+  }
+  main .text #timer {
+    gap: 22px;
+  }
+  main .text #timer div {
+    padding: 0;
+  }
+  main .text #timer div span {
+    font-size: 3rem;
+  }
+  main .text .cadastro h3 {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 351px) {
+  main .text h1 {
+    font-size: 1.5rem;
+  }
+  main .text #timer {
+    gap: 15px;
+  }
+  main .text #timer div {
+    padding: 0;
+  }
+  main .text #timer div p {
+    font-size: 0.7rem;
+  }
+  main .text #timer div span {
+    font-size: 3rem;
+  }
+  main .text .cadastro h3 {
+    font-size: 0.7rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
