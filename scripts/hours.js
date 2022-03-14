@@ -3,7 +3,7 @@
 let intervalo = setInterval(atualizar, 1000)
 
 function atualizar(){
-    const dt = new Date(2022, 2, 14, 10, 23, 10 );
+    const dt = new Date(2022, 2, 31, 10, 23, 10 );
         const time = new Date();
         const mili = dt - time; //valor em milisegundos
         
